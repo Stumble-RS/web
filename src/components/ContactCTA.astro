@@ -1,15 +1,19 @@
 ---
-import CallToAction from "./CallToAction.astro";
 import Icon from "./Icon.astro";
 ---
 
-<aside>
-  <h2>Interested in working together?</h2>
-  <CallToAction href='mailto:sarthakagrawal927@gmail.com'>
-    Send Us a Message
-    <Icon icon='paper-plane-tilt' size='1.2em' />
-  </CallToAction>
-</aside>
+<form>
+  <aside>
+    <h2>Want to get access?</h2>
+    <div>
+      <input type='email' name='email' placeholder='Enter your email' />
+      <button class='submitBtn' type='submit'>
+        Join Waitlist
+        <Icon icon='paper-plane-tilt' size='1.2em' />
+      </button>
+    </div>
+  </aside>
+</form>
 
 <style>
   aside {
@@ -22,6 +26,20 @@ import Icon from "./Icon.astro";
     padding: 5rem 1.5rem;
     background-color: var(--gray-999_40);
     box-shadow: var(--shadow-sm);
+  }
+
+  .submitBtn {
+    text-align: center;
+    padding: 0.56em 2em;
+    gap: 0.8em;
+    color: var(--accent-text-over);
+    text-decoration: none;
+    line-height: 1.1;
+    border-radius: 999rem;
+    overflow: hidden;
+    background: var(--gradient-accent-orange);
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
   }
 
   h2 {
@@ -44,3 +62,25 @@ import Icon from "./Icon.astro";
     }
   }
 </style>
+
+<script>
+  const form = document.querySelector("form") as HTMLFormElement;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const email = formData.get("email")?.toString();
+    if (email && email.length < 10) return;
+    await fetch(`${import.meta.env.PUBLIC_FIREBASE_URL}/stumble-email.json`, {
+      method: "POST",
+      body: JSON.stringify(email),
+    });
+    const newContent = document.createTextNode("Thanks for subscribing!");
+    (document.querySelector("aside div") as HTMLDivElement).appendChild(
+      newContent,
+    );
+    setTimeout(() => {
+      newContent.remove();
+    }, 3000);
+    form.reset();
+  });
+</script>

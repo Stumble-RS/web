@@ -10,7 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.3.0",
-    "astro-compress": "^1.1.35"
+    "@astrojs/vercel": "^3.5.0",
+    "@types/got": "^9.6.12",
+    "@types/node": "^20.2.5",
+    "astro": "^2.6.1",
+    "astro-compress": "^1.1.35",
+    "got": "^13.0.0"
   }
 }
