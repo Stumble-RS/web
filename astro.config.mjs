@@ -7,5 +7,10 @@ import vercelEdge from '@astrojs/vercel/edge';
 export default defineConfig({
   integrations: [compress()],
   output: "server",
-  adapter: vercelEdge()
+  adapter: vercelEdge(),
+  vite:{
+    ssr:{
+      external:['svgo'],
+    },
+  },
 });

@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import IconLinks from "../content/socialLinks";
 const currentYear = new Date().getFullYear();
 ---
 
@@ -8,9 +8,10 @@ const currentYear = new Date().getFullYear();
     <p>Designed & Developed in India with ❤️ @{currentYear}</p>
   </div>
   <p class='socials'>
-    <a href='https://twitter.com/me'> Twitter</a>
-    <a href='https://github.com/me'> GitHub</a>
-    <a href='https://codepen.io/me'> CodePen</a>
+    <a href={IconLinks.twitter}> Twitter</a>
+    <a href={IconLinks.github}> GitHub</a>
+    <a href={IconLinks.linkedin}> LinkedIn</a>
+    <a href={IconLinks.instagram}> Instagram</a>
   </p>
 </footer>
 <style>

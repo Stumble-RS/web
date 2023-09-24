@@ -1,37 +1,32 @@
 ---
+import IconLinks  from "../content/socialLinks";
 import Icon, { Props as IconProps } from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 
 /** Main menu items */
-const textLinks: { label: string; href: string }[] = [
-  { label: "Home", href: "/" },
-  { label: "Work", href: "/work/" },
-  { label: "About", href: "/about/" },
-];
+// const textLinks: { label: string; href: string }[] = [
+//   { label: "Home", href: "/" },
+//   { label: "Work", href: "/work/" },
+//   { label: "About", href: "/about/" },
+// ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
-  { label: "Twitter", href: "https://twitter.com/me", icon: "twitter-logo" },
-  { label: "Twitch", href: "https://twitch.tv/me", icon: "twitch-logo" },
-  { label: "GitHub", href: "https://github.com/me", icon: "github-logo" },
-  { label: "CodePen", href: "https://codepen.io/me", icon: "codepen-logo" },
-  { label: "dribbble", href: "https://dribbble.com/me", icon: "dribbble-logo" },
-  {
-    label: "YouTube",
-    href: "https://www.youtube.com/@me/",
-    icon: "youtube-logo",
-  },
+  { label: "Twitter", href: IconLinks.twitter, icon: "twitter-logo" },
+  { label: "Instagram", href: IconLinks.instagram, icon: "instagram-logo" },
+  { label: "GitHub", href: IconLinks.github, icon: "github-logo" },
+  { label: "Linkedin", href: IconLinks.linkedin, icon: "linkedin-logo" },
 ];
 ---
 
 <nav>
   <div class='menu-header'>
     <a href='/' class='site-title'>
-      <Icon
-        icon='terminal-window'
-        color='var(--accent-regular)'
-        size='1.6em'
-        gradient
+      <img
+        width="43"
+        height="173"
+        src="/assets/logo.svg"
+        alt="Jeanine White at work with a colleague"
       />
       Stumble
     </a>
@@ -46,7 +41,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   </div>
   <div id='menu-content'>
     <ul class='nav-items'>
-      {
+      <!-- {
         textLinks.map(({ label, href }) => (
           <li>
             <a
@@ -64,7 +59,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
             </a>
           </li>
         ))
-      }
+      } -->
     </ul>
     <div class='menu-footer'>
       <div class='socials'>
@@ -78,9 +73,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
         }
       </div>
 
-      <div class='theme-toggle'>
+      <!-- <div class='theme-toggle'>
         <ThemeToggle />
-      </div>
+      </div> -->
     </div>
   </div>
 </nav>
@@ -274,6 +269,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       padding: 0.5rem 0.5625rem;
       background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
       box-shadow: var(--shadow-md);
+      opacity: 0;
     }
 
     .nav-items::before {

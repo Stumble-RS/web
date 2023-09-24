@@ -1,0 +1,64 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div>
+  <input type="text" class="beautiful-textfield" placeholder="Enter your email">
+  <button class='beautiful-button'>
+    Join Waitlist
+    <Icon icon='paper-plane-tilt' size='1.2em' />
+  </button>
+</div>
+
+<style>
+.beautiful-button {
+    background-color: var(--accent-regular);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.beautiful-button:hover {
+    background-color: var(--accent-light);
+}
+/* Add styles to the textfield */
+.beautiful-textfield {
+    padding: 10px;
+    border: 2px solid var(--accent-regular);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+</style>
+
+<script>
+  const form = document.querySelector("form") as HTMLFormElement;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const email = formData.get("email")?.toString();
+    let newContentText = "Thanks for subscribing!"
+    // TODO: test email with regex
+    if (email !== undefined && email.length < 10) {
+      newContentText = "Please enter a valid email";
+    } else {
+      await fetch(`${import.meta.env.PUBLIC_FIREBASE_URL}/stumble-email.json`, {
+        method: "POST",
+        body: JSON.stringify(email),
+      });
+    }
+    const newContent = document.createTextNode(newContentText);
+    (document.querySelector("aside div") as HTMLDivElement).appendChild(
+      newContent,
+    );
+    setTimeout(() => {
+      newContent.remove();
+    }, 2400);
+    form.reset();
+  });
+</script>
+
