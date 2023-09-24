@@ -4,7 +4,6 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [compress()],
   output: "server",
   adapter: vercel({
     webAnalytics: {
@@ -13,7 +12,7 @@ export default defineConfig({
     speedInsights: {
       enabled: true,
     },
-    imageService: true,
+    // imageService: true,
     edgeMiddleware: true,
   }),
   vite:{
@@ -21,4 +20,5 @@ export default defineConfig({
       external:['svgo'],
     },
   },
+  integrations: [compress()],
 });
