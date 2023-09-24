@@ -1,13 +1,21 @@
 import { defineConfig } from 'astro/config';
 import compress from "astro-compress";
-
-import vercelEdge from '@astrojs/vercel/edge';
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [compress()],
   output: "server",
-  adapter: vercelEdge(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+      enabled: true,
+    },
+    imageService: true,
+    edgeMiddleware: true,
+  }),
   vite:{
     ssr:{
       external:['svgo'],
