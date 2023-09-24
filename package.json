@@ -13,6 +13,7 @@
     "@astrojs/vercel": "^3.5.0",
     "@types/got": "^9.6.12",
     "@types/node": "^20.2.5",
+    "@vercel/analytics": "^1.0.2",
     "astro": "^2.6.1",
     "astro-compress": "2.0.15",
     "astro-icon": "^0.8.1",
