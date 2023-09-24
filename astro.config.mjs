@@ -11,14 +11,7 @@ export default defineConfig({
     },
     speedInsights: {
       enabled: true,
-    },
-    // imageService: true,
-    edgeMiddleware: true,
+    }
   }),
-  vite:{
-    ssr:{
-      external:['svgo'],
-    },
-  },
   integrations: [compress()],
 });
