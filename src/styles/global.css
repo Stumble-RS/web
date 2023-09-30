@@ -216,6 +216,10 @@ h5 {
   flex-direction: column;
 }
 
+.right {
+  float: right
+}
+
 .gap-2 {
   gap: 0.5rem;
 }

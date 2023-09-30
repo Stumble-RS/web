@@ -1,0 +1,93 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>About our mission: </h2>
+		<p>As stated in our motto, our goal is to revive traditional 
+			conversations in a world overwhelmed by the mindless 
+			swipe-and-scroll culture. We're confident that you've 
+			grown up witnessing romantic comedies featuring serendipitous 
+			encounters between the main characters, and we bet you've 
+			envisioned yourself in such scenarios too! 
+		</p>
+		<p>We're also sure that you've experienced situations where 
+			you've wanted to strike up a conversation with someone 
+			due to shared interests, perhaps because they're sporting 
+			a 'wubba lubba dub dub' T-shirt or because you're both 
+			die-hard Ferrari F1 fans :p.
+		</p>	
+		<p>	That's why we've taken the initiative to create a platform 
+			that facilitates these very conversations! 
+		</p>
+		<p>
+			Our motto, in a single line, is to bring back old-school 
+			conversations between people at the advent of technology.
+		</p>
+	</div>
+	<div class="stack gap-2">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>About our vision: </h2>
+		<p>
+			Our vision is straightforward: We aim to create a world 
+			where if two individuals wish to engage in a conversation, 
+			they can do so without constantly worrying about the countless 
+			obstacles that might hinder their interaction.
+		</p>
+		<p>
+			For instance, imagine spotting someone you'd like to 
+			converse with at a concert, the airport, or a cute café. 
+			Our aim is to ensure that you can approach them without 
+			pondering whether they share your desire to engage in conversation, 
+			as we've got that issue covered for you.
+		</p>
+	</div>
+	
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+		align-content: space-between;
+
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		align-content: space-between;
+
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

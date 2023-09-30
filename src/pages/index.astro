@@ -8,6 +8,8 @@ import Hero from "../components/Hero.astro";
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Testimonials.astro";
+import AboutStumble from "../components/AboutStumble.astro";
+import IdeaSection from '../components/IdeaSection.astro';
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
 
 // Full Astro Component Syntax:
@@ -32,16 +34,27 @@ import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
           </div>
         </Hero>
 
-        <img
-          alt='Jeanine White smiling in a red plaid shirt and tortoise shell glasses'
-          width='480'
-          height='620'
-          src='/assets/portrait.jpg'
-        />
+        <video autoplay>
+          width='680'
+          height='820'
+          <source src='/assets/firstScreenVideo.mp4' type="video/mp4"/>
+        </video>
       </header>
 
-      <Skills />
+      
     </div>
+
+    <div class='wrapper stack gap-8 lg:gap-20'>
+      <AboutStumble />
+    </div>
+
+    <div class='wrapper stack gap-8 lg:gap-20'>
+      <IdeaSection />
+    </div>
+
+    <div class='wrapper stack gap-8 lg:gap-20'>
+      <Skills />
+    </div>  
 
  <!-- <main class='wrapper stack gap-20 lg:gap-48'> -->
         <!--  <section class='section with-background with-cta'>
