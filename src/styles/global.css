@@ -17,7 +17,7 @@
   --gray-999: #ffffff;
 
   --accent-light: #c561f6;
-  --accent-regular: #7611a6;
+  --accent-regular: #e3e6ee;
   --accent-dark: #1c0056;
   --accent-overlay: hsla(280, 89%, 67%, 0.33);
   --accent-subtle-overlay: var(--accent-overlay);
@@ -175,6 +175,7 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 10%;
   font-size: var(--text-4xl);
 }
 
@@ -214,6 +215,10 @@ h5 {
 .stack {
   display: flex;
   flex-direction: column;
+}
+
+.img {
+  margin-top: 50%;
 }
 
 .right {
