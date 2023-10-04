@@ -6,13 +6,12 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   output: "server",
   adapter: vercel({
-    analytics: true,
     webAnalytics: {
       enabled: true,
     },
     speedInsights: {
       enabled: true,
-    },
+    }
   }),
   integrations: [compress()],
 });
