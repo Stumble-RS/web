@@ -1,8 +1,8 @@
 ---
 ---
 
-<section class="box skills">
-	<div class="stack gap-2">
+<section class="box stack">
+	<div class="text">
 
 		<p>
             The concept is quite simple. Picture this scenario: you're at a concert, and there's someone you'd like to strike up a conversation with. In such situations, particularly when both of you are with friends, a multitude of questions might cross your mind. You might wonder if the other person is open to chatting with you, possibly due to various factors.
@@ -22,13 +22,11 @@
             How you choose to proceed with this newfound connection is entirely up to you. Our mission, which was to facilitate the initiation of an in-person conversation, has been accomplished.
         </p>
 	</div>
-	<div class="stack gap-2">
-		<video width="1100" height="600" autoplay>
-			
+	<span class="center">
+		<video width="300" height="600" autoplay>
 			<source src='/assets/stumble-demo.mp4' type="video/mp4"/>
-		  </video>
-	</div>
-	
+		</video>
+	</span>
 </section>
 
 <style>
@@ -38,8 +36,14 @@
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
-
 	}
+
+	.center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 
 	.skills {
 		display: flex;
@@ -55,6 +59,8 @@
 		.box {
 			border-radius: 1.5rem;
 			padding: 2.5rem;
+			flex-direction: row;
+			font-size: larger;
 		}
 	}
 </style>

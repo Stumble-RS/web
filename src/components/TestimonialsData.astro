@@ -2,11 +2,11 @@
 import Icon from './Icon.astro';
 ---
 
-<section class="box skills">
-	<h3>
+<section class="box">
+	<h2>
 		What are early adopters have to say about us: 
-	  </h3>
-	  <section>
+	</h2>
+	<section class="skills">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="heart" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h3>Shreya</h3>
@@ -26,12 +26,15 @@ import Icon from './Icon.astro';
 </section>
 
 <style>
+	h2 {
+		font-size: var(--text-3xl);
+	}
 	.box {
-		border: 1px solid var(--gray-800);
+		/* border: 1px solid var(--gray-800); */
 		border-radius: 0.75rem;
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+		/* box-shadow: var(--shadow-sm); */
 	}
 
 	.skills {
@@ -40,7 +43,7 @@ import Icon from './Icon.astro';
 		gap: 3rem;
 	}
 
-	.skills h2 {
+	.skills h3 {
 		font-size: var(--text-lg);
 	}
 
@@ -60,7 +63,7 @@ import Icon from './Icon.astro';
 			gap: 5rem;
 		}
 
-		.skills h2 {
+		.skills h3 {
 			font-size: var(--text-2xl);
 		}
 	}

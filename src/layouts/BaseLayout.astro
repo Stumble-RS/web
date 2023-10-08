@@ -6,6 +6,7 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -23,6 +24,7 @@ const { title, description } = Astro.props;
 		<div class="stack backgrounds">
 			<Nav />
 			<slot />
+			<ContactCTA/>
 			<Footer />
 		</div>
 
