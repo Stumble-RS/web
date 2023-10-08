@@ -1,14 +1,16 @@
 ---
-import IconLinks  from "../content/socialLinks";
+import IconLinks  from "../utils/socialLinks";
 import Icon, { Props as IconProps } from "./Icon.astro";
-import ThemeToggle from "./ThemeToggle.astro";
 
 /** Main menu items */
-// const textLinks: { label: string; href: string }[] = [
-//   { label: "Home", href: "/" },
-//   { label: "Work", href: "/work/" },
-//   { label: "About", href: "/about/" },
-// ];
+const textLinks: { label: string; href: string }[] = [
+  { label: "Home", href: "/" },
+  { label: "Blogs", href: "/blogs/" },
+  { label: "Testimonials", href: "/testimonials/" },
+  { label: "About", href: "/about/" },
+  {label: "Competitors", href: "/competitors/"},
+  {label: "Workings", href: "/workings/"},
+];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
@@ -26,7 +28,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
         width="43"
         height="173"
         src="/assets/logo.svg"
-        alt="Jeanine White at work with a colleague"
+        alt="Stumble, dating made better"
       />
       Stumble
     </a>
@@ -41,7 +43,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   </div>
   <div id='menu-content'>
     <ul class='nav-items'>
-      <!-- {
+      {
         textLinks.map(({ label, href }) => (
           <li>
             <a
@@ -59,7 +61,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
             </a>
           </li>
         ))
-      } -->
+      }
     </ul>
     <div class='menu-footer'>
       <div class='socials'>
@@ -72,10 +74,6 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           ))
         }
       </div>
-
-      <!-- <div class='theme-toggle'>
-        <ThemeToggle />
-      </div> -->
     </div>
   </div>
 </nav>
@@ -269,7 +267,6 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       padding: 0.5rem 0.5625rem;
       background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
       box-shadow: var(--shadow-md);
-      opacity: 0;
     }
 
     .nav-items::before {

@@ -10,6 +10,8 @@ import ContactCTA from "../components/ContactCTA.astro";
 import AboutStumble from "../components/AboutStumble.astro";
 import IdeaSection from '../components/IdeaSection.astro';
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
+import Grid from "../components/Grid.astro";
+import CallToAction from "../components/CallToAction.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -48,67 +50,7 @@ import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
     </div>
 
 
-    <div class='wrapper stack gap-8 lg:gap-20'>
-        
-    </div>  
 
- <!-- <main class='wrapper stack gap-20 lg:gap-48'> -->
-        <!--  <section class='section with-background with-cta'>
-        <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Selected Work</h3>
-          <p>
-            Take a look below at some of my featured work for clients from the
-            past few years.
-          </p>
-        </header>
-
-        <div class='gallery'>
-          <Grid variant='offset'>
-            {
-              projects.map((project) => (
-                <li>
-                  <PortfolioPreview project={project} />
-                </li>
-              ))
-            }
-          </Grid>
-        </div>
-
-        <div class='cta'>
-          <CallToAction href='/work/'>
-            View All
-            <Icon icon='arrow-right' size='1.2em' />
-          </CallToAction>
-        </div>
-      </section>  -->
-
-      <!-- <section class='section with-background bg-variant'>
-        <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Features</h3>
-          <p>
-            Stumble will be having the following features:
-          </p>
-        </header>
-
-        <div class='gallery'>
-          <Grid variant='small'>
-            {
-              [
-                "Realtime Chat",
-                "BuzzFeed",
-                "The Next Web",
-                "awwwards.",
-                "TechCrunch",
-              ].map((brand) => (
-                <li class='mention-card'>
-                  <p>{brand}</p>
-                </li>
-              ))
-            }
-          </Grid>
-        </div>
-      </section> -->
-    <!-- </main> -->
 
     <ContactCTA />
   </div>
