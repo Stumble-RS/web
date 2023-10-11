@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout>
+  <div class='stack gap-20'>
+    <main class='wrapper about'>
+      <Hero
+        title='Privacy Terms for Stumble'
+        tagline='Because we care about your privacy'
+      />
+
+      <section>
+        <div class='content'>
+    <p><em>Last Updated: 11th October 2023</em></p>
+
+    <p>Welcome to Stumble! We are committed to protecting your privacy and safeguarding your personal information. This Privacy Policy explains how we collect, use, and share your information when you use our dating app, particularly with respect to location-based data. By using our app, you agree to the practices described in this policy. Please take a moment to review it carefully.</p>
+
+    <h5><strong>1. Information We Collect</strong></h5>
+
+    <ol>
+        <li><strong>a. User Profile Information:</strong> When you sign up for Stumble, you will be asked to provide certain personal information, including your name, gender, age, email address, and profile picture. You may also choose to provide additional information such as your interests, preferences, and a brief bio.</li>
+
+        <li><strong>b. Location Information:</strong> Our dating app uses location services to provide you with potential matches based on your location. We collect and store your precise location data, including your latitude and longitude coordinates, while the app is in use. You can control the app's access to your location through your device's settings.</li>
+
+        <li><strong>c. Usage Data:</strong> We collect information about your interactions with the app, such as the profiles you view, messages you send, and other app usage data.</li>
+    </ol>
+
+    <h5><strong>2. How We Use Your Information</strong></h5>
+
+    <ol>
+        <li><strong>a. Matchmaking:</strong> We use your location data to connect you with potential matches in your area. This data helps us provide a better dating experience by showing you profiles of people who are nearby.</li>
+
+        <li><strong>b. Communication:</strong> Your user profile information is used to facilitate communication between you and other users of the app, such as sending messages and notifications about potential matches.</li>
+
+        <li><strong>c. App Improvement:</strong> We analyze usage data to improve our app's features, user experience, and overall functionality.</li>
+    </ol>
+
+    <h5><strong>3. Data Sharing</strong></h5>
+
+    <p>We understand the sensitivity of the information you provide, and we do not share your personal information with third parties without your consent. However, there are some exceptions:</p>
+
+    <ol>
+        <li><strong>a. Other Users:</strong> Your profile information, including your name, age, and profile picture, will be visible to other users of the app. Be cautious about the information you share in your profile.</li>
+
+        <li><strong>b. Service Providers:</strong> We may share your information with third-party service providers who assist us in delivering our services. These service providers are contractually obligated to protect your information and are not allowed to use it for their purposes.</li>
+
+        <li><strong>c. Legal Compliance:</strong> We may share information with law enforcement or other regulatory authorities as required by law or in response to legal processes, such as subpoenas or court orders.</li>
+    </ol>
+
+    <h5><strong>4. Security</strong></h5>
+
+    <p>We take security seriously and have implemented industry-standard measures to protect your personal information. However, no system is completely immune to security risks, so we cannot guarantee absolute security. It's important that you take steps to protect your personal information and maintain the security of your account.</p>
+
+    <h5><strong>5. Your Choices</strong></h5>
+
+    <ol>
+        <li><strong>a. You can review, update, or delete your user profile information at any time through the app settings.</strong></li>
+
+        <li><strong>b. You can control the app's access to your location through your device's settings.</strong></li>
+
+        <li><strong>c. You can opt out of promotional emails and notifications from us.</strong></li>
+    </ol>
+
+    <h5><strong>6. Children's Privacy</strong></h5>
+
+    <p>Our app is intended for users who are 18 years or older. We do not knowingly collect or solicit information from anyone under the age of 18. If you believe we have collected information from a minor, please contact us immediately.</p>
+
+    <h5><strong>7. Changes to this Privacy Policy</strong></h5>
+
+    <p>We may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Privacy Policy on this page. We encourage you to review this policy periodically.</p>
+
+    <h5><strong>8. Contact Us</strong></h5>
+
+    <p>If you have any questions or concerns about our Privacy Policy or the way we handle your personal information, please contact us at team@getstumble.app.</p>
+
+    <p>Thank you for choosing Stumble. We are committed to helping you find meaningful connections while respecting your privacy and data security.</p>
+
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  h5{
+    padding-top: 8vh;
+    padding-bottom: 2vh;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 3;
+  }
+
+  .content p {
+    margin-bottom: 50px;
+  }
+
+  .content ul {
+    margin-bottom: 50px;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
