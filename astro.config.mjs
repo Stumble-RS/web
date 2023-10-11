@@ -15,5 +15,9 @@ export default defineConfig({
       enabled: true
     }
   }),
-  integrations: [compress(), sitemap()]
+  site: "https://getstumble.app",
+  integrations: [compress(), sitemap({
+    changefreq: 'daily',
+    priority: 0.7,
+  })]
 });
