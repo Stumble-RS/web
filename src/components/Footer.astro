@@ -1,6 +1,15 @@
 ---
 import IconLinks from "../utils/socialLinks";
 const currentYear = new Date().getFullYear();
+
+const SOCIAL_LINKS_LIST: { label: string; href: string }[] = [
+  { label: "Twitter", href: IconLinks.twitter },
+  { label: "Instagram", href: IconLinks.instagram },
+  { label: "GitHub", href: IconLinks.github },
+  { label: "Linkedin", href: IconLinks.linkedin },
+  { label: "Youtube", href: IconLinks.youtube },
+  { label: "Whatsapp", href: IconLinks.whatsapp },
+];
 ---
 
 <footer>
@@ -8,10 +17,9 @@ const currentYear = new Date().getFullYear();
     <p>Designed & Developed in India with ❤️ @{currentYear}</p>
   </div>
   <p class='socials'>
-    <a href={IconLinks.twitter}> Twitter</a>
-    <a href={IconLinks.github}> GitHub</a>
-    <a href={IconLinks.linkedin}> LinkedIn</a>
-    <a href={IconLinks.instagram}> Instagram</a>
+    {SOCIAL_LINKS_LIST.map(val => {
+      return <a href={val.href}> {val.label} </a>
+    })}
   </p>
 </footer>
 <style>

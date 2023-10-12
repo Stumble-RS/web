@@ -13,12 +13,12 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Privacy", href: "/privacy/" },
 ];
 
-/** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
+const SOCIAL_LINKS_LIST: { label: string; href: string; icon: IconProps["icon"] }[] = [
   { label: "Twitter", href: IconLinks.twitter, icon: "twitter-logo" },
   { label: "Instagram", href: IconLinks.instagram, icon: "instagram-logo" },
   { label: "GitHub", href: IconLinks.github, icon: "github-logo" },
   { label: "Linkedin", href: IconLinks.linkedin, icon: "linkedin-logo" },
+  { label: "Youtube", href: IconLinks.youtube, icon: "youtube-logo"},
 ];
 ---
 
@@ -67,7 +67,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     <div class='menu-footer'>
       <div class='socials'>
         {
-          iconLinks.map(({ href, icon, label }) => (
+          SOCIAL_LINKS_LIST.map(({ href, icon, label }) => (
             <a href={href} class='social'>
               <span class='sr-only'>{label}</span>
               <Icon icon={icon} />

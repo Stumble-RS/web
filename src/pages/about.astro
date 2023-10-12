@@ -11,10 +11,7 @@ import Skills from '../components/Skills.astro';
 			<Hero
 				title="Why do you need stumble?"
 				tagline="You have enough social media apps; why do you need another one?"
-			>
-
-			</Hero>
-
+			/>
 			<section>
 				<div class="content">
 					<p>
@@ -50,17 +47,12 @@ import Skills from '../components/Skills.astro';
 	</div>
 </BaseLayout>
 
+
 <style>
 	.about {
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
 	}
 
 	section {
@@ -70,14 +62,9 @@ import Skills from '../components/Skills.astro';
 		color: var(--gray-200);
 	}
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
 	.content {
 		grid-column: 2 / 3;
+		padding-bottom: 2vh;
 	}
 
 	.content p {

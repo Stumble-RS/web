@@ -6,11 +6,15 @@ import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="Competition for Stumble" description="The best dating apps in India 2023">
-	<div class="stack">
+	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero title="What differentiates us from other apps in the same space?" />
+			<Hero  title='Standing Out' tagline="What differentiates us from other apps in the same space?" />
+			<section>
+				<div class="content">
+					<CompetitorsData/>
+				</div>
+			</section>
 		</main>
-		<CompetitorsData />
 	</div>
 </BaseLayout>
 
@@ -21,12 +25,6 @@ import Hero from '../components/Hero.astro';
 		gap: 3.5rem;
 	}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
 	section {
 		display: flex;
 		flex-direction: column;
@@ -34,14 +32,9 @@ import Hero from '../components/Hero.astro';
 		color: var(--gray-200);
 	}
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
 	.content {
-		grid-column: 2 / 4;
+		grid-column: 2 / 3;
+		padding-bottom: 2vh;
 	}
 
 	.content p {
