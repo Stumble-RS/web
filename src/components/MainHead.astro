@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
 interface Props {
   title?: string | undefined;
@@ -10,6 +11,15 @@ const {
   title = "Stumble! Date better.",
   description = "Best dating app to meet new people in India. Making converations old-school.",
 } = Astro.props;
+
+const BRAND = {
+  NAME: "Stumble",
+  TAGLINE: "Date better.",
+  ABOUT: "Best dating app to meet new people in India. Making converations old-school.",
+  LOGO_URL: "https://getstumble.app/assets/logo.svg",
+  TWITTER: "stumble_app+",
+  WEBSITE: "https://getstumble.app",
+}
 ---
 
 <meta charset='UTF-8' />
@@ -19,13 +29,17 @@ const {
 <title>{title}</title>
 
 <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' />
-<link rel='preconnect' href='https://fonts.googleapis.com' />
-<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-	rel="stylesheet"
-  media="print" onload="this.onload=null;this.removeAttribute('media');"
-/>
+<meta property="og:type" content={"website"} />
+<meta property="og:site_name" content={BRAND.NAME} />
+<meta property="og:url" content={BRAND.WEBSITE} />
+<meta property="og:title" content={(BRAND.NAME + ' - ' + BRAND.TAGLINE)} />
+<meta property="og:description" content={BRAND.ABOUT} />
+<meta property="og:image" content={BRAND.LOGO_URL} />
+<meta name="twitter:site" content={'@'+BRAND.TWITTER} />
+<meta name="twitter:title" content={(BRAND.NAME + ' - ' + BRAND.TAGLINE)} />
+<meta name="twitter:description" content={BRAND.ABOUT} />
+<meta name="twitter:image" content={BRAND.LOGO_URL} />
+<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"/>
 <link rel="sitemap" href="/sitemap-index.xml" />
 <script is:inline>
   // This code is inlined in the head to make dark mode instant & blocking.
