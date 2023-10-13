@@ -6,12 +6,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 
 // Page section components
-import ContactCTA from "../components/ContactCTA.astro";
 import AboutStumble from "../components/AboutStumble.astro";
 import IdeaSection from '../components/IdeaSection.astro';
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
-import Grid from "../components/Grid.astro";
-import CallToAction from "../components/CallToAction.astro";
+import NeedStumble from "../components/NeedStumble.astro";
+import TestimonialsData from "../components/TestimonialsData.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -44,6 +43,9 @@ import CallToAction from "../components/CallToAction.astro";
     </div>
     <div class='wrapper stack gap-8 lg:gap-20'>
       <AboutStumble />
+      <NeedStumble showMiniHeading/>
+      <TestimonialsData/>
+      <IdeaSection showMiniHeading/>
     </div>
   </div>
 </BaseLayout>

@@ -1,8 +1,14 @@
 ---
+interface Props {
+	showMiniHeading?: boolean;
+}
+
+const { showMiniHeading = false }: Props = Astro.props;
 ---
 
 <section class="box stack">
 	<div class="text">
+		{showMiniHeading && <h3 class="pb-20">How Stumble stands out</h3>}
 
 		<p>
             The concept is quite simple. Picture this scenario: you're at a concert, and there's someone you'd like to strike up a conversation with. In such situations, particularly when both of you are with friends, a multitude of questions might cross your mind. You might wonder if the other person is open to chatting with you, possibly due to various factors.
@@ -58,7 +64,6 @@
 	@media (min-width: 50em) {
 		.box {
 			border-radius: 1.5rem;
-			padding: 2.5rem;
 			flex-direction: row;
 			font-size: larger;
 		}

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import Hero from '../components/Hero.astro';
 import Skills from '../components/Skills.astro';
+import NeedStumble from '../components/NeedStumble.astro';
 ---
 
 <BaseLayout>
@@ -13,34 +14,7 @@ import Skills from '../components/Skills.astro';
 				tagline="You have enough social media apps; why do you need another one?"
 			/>
 			<section>
-				<div class="content">
-					<p>
-						Stumble is on a mission to rekindle the art of old-fashioned conversation in a world where mindless swiping reigns supreme. As our motto strongly advocates, we yearn for a return to those simpler times when people would boldly strike up conversations with one another—be it with a potential romantic interest or someone sporting a captivating t-shirt.
-					</p>
-					<p>
-						Our generation has been raised on a diet of beloved romcoms like 'How I Met Your Mother' and 'F.R.I.E.N.D.S.' Yet, paradoxically, the majority of us opt for the convenience of social media apps and dating websites to seek out potential love interests, often located miles away.
-					</p>
-					<p>
-						However, it's essential to acknowledge that we aren't solely responsible for this shift in social dynamics. Despite our exposure to these shows and a shared mindset, when we encounter someone we'd like to converse with, a multitude of apprehensions flood our minds, hindering us from approaching that enigmatic stranger.
-					</p>
-					<p>
-
-						In the realm of potential romantic connections, these concerns may include:
-
-						<ul>
-						<li>What if that person isn't single?</li>
-						<li>What if they're not actively seeking a relationship?</li>
-						<li>What if their friends mock my approach?</li>
-						<li>What if they're not attracted to my gender?</li>
-						<li>What if, after approaching them, I discover they're not worth my time?</li>
-
-						Similar inquiries may arise in other potential non-romantic encounters as well.
-					</ul>
-					</p>
-					<p>
-						So, how do we surmount these obstacles and gain clarity on these questions before initiating contact? How can we dismantle the mental barriers that deter us from taking that first step? Well, these are precisely the conundrums we are dedicated to unraveling at Stumble.
-					</p>
-				</div>
+				<NeedStumble/>
 			</section>
 		</main>
 		<Skills/>
@@ -60,31 +34,6 @@ import Skills from '../components/Skills.astro';
 		flex-direction: column;
 		gap: 0.5rem;
 		color: var(--gray-200);
-	}
-
-	.content {
-		grid-column: 2 / 3;
-		padding-bottom: 2vh;
-	}
-
-	.content p {
-		margin-bottom: 50px;
-	}
-
-	.content ul {
-		margin-bottom: 50px;
-	}
-
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
 	}
 
 	@media (min-width: 50em) {
