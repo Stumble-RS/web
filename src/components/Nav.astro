@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import IconLinks  from "../utils/socialLinks";
 import Icon, { Props as IconProps } from "./Icon.astro";
 
@@ -25,9 +26,9 @@ const SOCIAL_LINKS_LIST: { label: string; href: string; icon: IconProps["icon"] 
 <nav>
   <div class='menu-header'>
     <a href='/' class='site-title'>
-      <img
-        width="43"
-        height="173"
+      <Image
+        width={43}
+        height={173}
         src="/assets/logo.svg"
         alt="Stumble, dating made better"
       />

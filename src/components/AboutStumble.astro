@@ -1,11 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
 	<div class="stack gap-2">
 		<Icon icon="terminal-window" color='--accent-regular' size="2.5rem" gradient />
-		<h2>About our mission: </h2>
+		<h2 class="font-bold">About our mission: </h2>
 		<p>As stated in our motto, our goal is to revive traditional 
 			conversations in a world overwhelmed by the mindless 
 			swipe-and-scroll culture. We're confident that you've 
@@ -29,7 +30,7 @@ import Icon from './Icon.astro';
 	</div>
 	<div class="stack gap-2">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>About our vision: </h2>
+		<h2 class="font-bold">About our vision: </h2>
 		<p>
 			Our vision is straightforward: We aim to create a world 
 			where if two individuals wish to engage in a conversation, 
@@ -47,7 +48,7 @@ import Icon from './Icon.astro';
 		</p>
 	</div>
 	<div class="stack gap-2 img">
-		<img src="/assets/VisionImage.jpg" alt="Your browser does not support this image!"/>
+		<Image src="/assets/VisionImage.jpg" alt="Your browser does not support this image!" width={400} height={350} />
 	</div>
 	
 </section>
@@ -60,7 +61,6 @@ import Icon from './Icon.astro';
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 		align-content: space-between;
-
 	}
 
 	.skills {
