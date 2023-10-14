@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import compress from "astro-compress";
 import vercel from '@astrojs/vercel/serverless';
 import sitemap from "@astrojs/sitemap";
@@ -8,13 +8,17 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: "server",
   adapter: vercel({
-    webAnalytics: {
-      enabled: true
-    },
-    speedInsights: {
-      enabled: true
+    analytics: true,
+    imagesConfig: {
+      sizes: [400, 750],
+      formats: ["avif", "webp", "jpeg"],
+      minimumCacheTTL: 60 * 60 * 24,
     }
   }),
+  image: {
+    service: passthroughImageService(),
+  },
+  compressHTML: true,
   site: "https://getstumble.app",
   integrations: [compress(), sitemap({
     changefreq: 'daily',
