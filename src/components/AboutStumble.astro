@@ -1,6 +1,8 @@
 ---
-import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import { Picture } from 'astro:assets';
+import testImage from '../../public/assets/VisionImage.jpg';
+
 ---
 
 <section class="box skills">
@@ -48,7 +50,7 @@ import Icon from './Icon.astro';
 		</p>
 	</div>
 	<div class="stack gap-2 img">
-		<Image src="/assets/VisionImage.jpg" alt="Your browser does not support this image!" width={400} height={350} />
+		<Picture src={testImage} formats={['avif', 'webp']} alt="My super image in multiple formats!" />
 	</div>
 	
 </section>

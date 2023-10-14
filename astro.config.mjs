@@ -16,9 +16,6 @@ export default defineConfig({
     }
   }),
   site: "https://getstumble.app",
-  experimental: {
-    assets: true
-  },
   integrations: [compress(), sitemap({
     changefreq: 'daily',
     priority: 0.7
