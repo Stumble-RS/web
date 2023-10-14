@@ -8,7 +8,6 @@ description: |
 tags:
   - Dating Apps
   - Online Dating
-  - Relationship Etiquette
 ---
 
 ## Dating App Etiquette: The Dos and Don'ts

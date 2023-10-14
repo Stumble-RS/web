@@ -8,7 +8,6 @@ description: |
 tags:
   - Dating Apps
   - Dating in India
-  - Stumble App
 ---
 
 ## Do Dating Apps Work in India?
