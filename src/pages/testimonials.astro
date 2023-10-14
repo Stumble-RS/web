@@ -2,67 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TestimonialsData from '../components/TestimonialsData.astro';
 import Hero from '../components/Hero.astro';
+import "./../styles/about.css"
 ---
 
 <BaseLayout>
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero title="How does Stumble work?" />
+			<Hero
+				title="Early Impressions: What Our Beta Testers Are Saying"
+				tagline="Get a glimpse of the initial reactions and feedback from our beta testers who have experienced our dating app's unique features and innovations. Explore their early impressions and insights as we fine-tune the app for an even better dating experience."/
+			>
 		</main>
-		<TestimonialsData />
+		<div class="mx-10">
+			<TestimonialsData />
+		</div>
 	</div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content p {
-		margin-bottom: 50px;
-	}
-
-	.content ul {
-		margin-bottom: 50px;
-	}
-
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
 	@media (min-width: 50em) {
 		.about {
 			display: grid;
@@ -71,11 +28,6 @@ import Hero from '../components/Hero.astro';
 
 		.about > :global(:first-child) {
 			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
 		}
 	}
 </style>

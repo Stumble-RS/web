@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Skills from '../components/Skills.astro';
 import NeedStumble from '../components/NeedStumble.astro';
+import "./../styles/about.css"
 ---
 
 <BaseLayout>
@@ -20,35 +21,3 @@ import NeedStumble from '../components/NeedStumble.astro';
 		<Skills/>
 	</div>
 </BaseLayout>
-
-
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-</style>

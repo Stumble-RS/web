@@ -1,29 +1,48 @@
 ---
 import Icon from './Icon.astro';
+
+const TestimonialsList = [
+	{
+		name: 'Shreya',
+		message: 'Thank you for this much needed app! I have finally found a medium to interact with my college crush!',
+	},
+	{
+		name: 'Zoya',
+		message: 'The app that our generation desperately needed! This app made having conversations with strangers extremely convenient, and will help me connect with a bunch of interesting people!',
+	},
+	{
+		name: 'Anushka',
+		message: 'Finally a way to experience my meet-cute fantasy! Thank you team Stumble for making this happen!!',
+	},
+	{
+		name: 'Sarah',
+		message: "I was thrilled to be part of the beta test for this app. The user-friendly interface and innovative features have truly set it apart. While I haven't found 'the one' just yet, I can already see that this app has the potential to revolutionize the dating scene in India."
+	},
+	{
+		name: "Raj",
+		message: "As a beta tester, I've been impressed by the thoughtful design and attention to user privacy. The app's unique approach to matching and its focus on meaningful connections are quite promising. I can't wait to see where this app goes."
+	},
+	{
+		name: "Sneha",
+		message: "I've had my fair share of experiences with dating apps, but this beta app stands out. It's refreshing to see an app that encourages genuine conversations and respects cultural nuances. While it's early days, I'm optimistic about the potential for lasting connections through this platform."
+	}
+];
 ---
 
-<section class="box">
+<div class="box">
 	<h2 class="font-bold text-4xl pb-10">
 		What are early adopters have to say about us: 
 	</h2>
 	<section class="skills">
-	<div class="stack gap-2 lg:gap-4">
+	{TestimonialsList.map(data => {
+		return <div class="stack gap-2 lg:gap-4">
 		<Icon icon="heart" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h3>Shreya</h3>
-		<p>Thank you for this much needed app! I have finally found a medium to interact with my college crush!</p>
+		<h3>{data.name}</h3>
+		<p>{data.message}</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="heart" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h3>Zoya</h3>
-		<p>The app that our generation desperately needed! This app made having conversations with strangers extremely convenient, and will help me connect with a bunch of interesting people!</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="heart" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h3>Anushka</h3>
-		<p>Finally a way to experience my meet-cute fantasy! Thank you team Stumble for making this happen!!</p>
-	</div>
-</section>
-</section>
+	}) }
+	</section>
+</div>
 
 <style>
 	h2 {
@@ -32,7 +51,6 @@ import Icon from './Icon.astro';
 	.box {
 		/* border: 1px solid var(--gray-800); */
 		border-radius: 0.75rem;
-		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		/* box-shadow: var(--shadow-sm); */
 	}
@@ -54,6 +72,7 @@ import Icon from './Icon.astro';
 	@media (min-width: 50em) {
 		.box {
 			border-radius: 1.5rem;
+			padding: 1.5rem;
 		}
 
 		.skills {

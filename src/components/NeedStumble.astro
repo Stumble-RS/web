@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { showMiniHeading = false }: Props = Astro.props;
+import "./../styles/about.css"
 ---
 
 <div class="content">
@@ -49,29 +50,6 @@ const { showMiniHeading = false }: Props = Astro.props;
 <div>
 
 <style>
-  .content {
-		grid-column: 2 / 3;
-		padding-bottom: 2vh;
-	}
 
-	.content p {
-		margin-bottom: 50px;
-	}
-
-	.content ul {
-		margin-bottom: 50px;
-	}
-
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
 
 </style>

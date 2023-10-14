@@ -6,8 +6,8 @@ interface Props {
 const { showMiniHeading = false }: Props = Astro.props;
 ---
 
-<section class="box stack">
-	<div class="text">
+<section>
+	<div class="content">
 		{showMiniHeading && <h3 class="pb-4">How Stumble stands out</h3>}
 
 		<p>
@@ -28,21 +28,14 @@ const { showMiniHeading = false }: Props = Astro.props;
             How you choose to proceed with this newfound connection is entirely up to you. Our mission, which was to facilitate the initiation of an in-person conversation, has been accomplished.
         </p>
 	</div>
-	<span class="center">
-		<video width="300" height="600" autoplay>
-			<source src='/assets/stumble-demo.mp4' type="video/mp4"/>
-		</video>
-	</span>
 </section>
+<div class="center">
+	<video width="300" height="600" autoplay>
+		<source src='/assets/stumble-demo.mp4' type="video/mp4"/>
+	</video>
+</div>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
 
 	.center {
 		display: flex;
@@ -51,20 +44,7 @@ const { showMiniHeading = false }: Props = Astro.props;
 	}
 
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
 	.p {
 		color: var(--gray-400);
-	}
-
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			font-size: larger;
-		}
 	}
 </style>

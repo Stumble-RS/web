@@ -3,17 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import IdeaSection from '../components/IdeaSection.astro';
 import Hero from '../components/Hero.astro';
+import "./../styles/about.css"
 ---
 
-<BaseLayout title="Stumble | Date Better" description="Making Conversations old school">
-	<div class="stack">
+<BaseLayout>
+	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero title="How does Stumble work?" />
+			<Hero title="How does Stumble work?" tagline='A peek into the unique concept'/>
+			<IdeaSection />
 		</main>
-    <IdeaSection />
 	</div>
 </BaseLayout>
-
-<style>
-
-</style>

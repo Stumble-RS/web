@@ -10,10 +10,24 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 interface Props {
 	title?: string | undefined;
+	additionalTitle?: string | undefined;
 	description?: string | undefined;
+	additionalDescription?: string | undefined;
 }
 
-const { title = "Stumble | Date Better", description = "Making Convserations old school via the best dating app in India, 2023" } = Astro.props;
+let {
+	title = "Stumble | Meet New People | Date Better",
+	description = "Reviving Old-School Conversations in 2023: India's Best Dating App, Bringing People Together for Real Connections. Experience authentic dating and make meaningful in-person connections with the help of our cutting-edge app.",
+	additionalTitle,
+	additionalDescription
+} = Astro.props;
+
+if(additionalTitle) {
+	title = `${additionalTitle} | ${title}`;
+}
+if(additionalDescription) {
+	description = `${additionalDescription} | ${description}`;
+}
 ---
 
 <html lang="en">

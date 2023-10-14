@@ -11,6 +11,7 @@ import IdeaSection from '../components/IdeaSection.astro';
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
 import NeedStumble from "../components/NeedStumble.astro";
 import TestimonialsData from "../components/TestimonialsData.astro";
+import BlogList from "../components/BlogList.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -21,7 +22,7 @@ import TestimonialsData from "../components/TestimonialsData.astro";
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero'>
         <Hero
-          title='Stumble'
+          title='Stumble: The best dating app in India'
           tagline='Making conversations old-school :)'
           align='start'
         >
@@ -44,6 +45,7 @@ import TestimonialsData from "../components/TestimonialsData.astro";
       <NeedStumble showMiniHeading/>
       <TestimonialsData/>
       <IdeaSection showMiniHeading/>
+      <BlogList/>
     </div>
   </div>
 </BaseLayout>

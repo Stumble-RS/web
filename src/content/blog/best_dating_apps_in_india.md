@@ -1,5 +1,5 @@
 ---
-title: The guide to best dating apps
+title: The guide to best dating apps in India
 publishDate: 2019-10-02 00:00:00
 img: /assets/stock-4.jpg
 img_alt: Ultimate guide to dating apps comparison
