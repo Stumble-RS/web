@@ -9,11 +9,6 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     analytics: true,
-    imagesConfig: {
-      sizes: [400, 750],
-      formats: ["avif", "webp", "jpeg"],
-      minimumCacheTTL: 60 * 60 * 24,
-    }
   }),
   image: {
     service: passthroughImageService(),
