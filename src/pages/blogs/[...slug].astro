@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { CollectionEntry, getCollection } from "astro:content";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
@@ -28,7 +28,10 @@ const { Content } = await entry.render();
     <div class='stack gap-15'>
       <header>
         <div class='wrapper stack gap-2'>
-          <a class='back-link' href='/blogs/'><Icon icon='arrow-left' /> <p class="ml-2 mb-2 -mt-1">Blogs</p></a>
+          <a class='back-link' href='/blogs/'>
+            <Icon icon='arrow-left' />
+            <p class='ml-2 mb-2 -mt-1'>Blogs</p>
+          </a>
           <Hero title={entry.data.title} align='start'>
             <div class='details'>
               <div class='tags'>
