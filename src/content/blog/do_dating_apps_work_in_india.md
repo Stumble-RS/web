@@ -11,7 +11,7 @@ tags:
   - Stumble App
 ---
 
-# Do Dating Apps Work in India?
+## Do Dating Apps Work in India?
 
 In recent years, dating apps have exploded in popularity worldwide, changing the way people meet and connect with potential partners. In India, this trend is no different, with millions of people turning to dating apps to find love and companionship. But the question remains: do dating apps really work in India? Let's delve into this topic and explore the ups and downs of using dating apps in the Indian context, with a focus on a new dating app called "Stumble."
 

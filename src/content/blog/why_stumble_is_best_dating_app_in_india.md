@@ -10,7 +10,7 @@ tags:
   - Product
 ---
 
-# Why Stumble is the Best Dating App in India
+## Why Stumble is the Best Dating App in India
 
 Most of us want to have meet-cutes in our lives, or already know that person (or people) who we have a thing for. And in most cases that is the person we want to get to know better. But, alas, due to the current apps in the market, this seems like a far-fetched idea. Due to the current options in the market, we are forced to swipe on someone many kilometers away. Our only options are to swipe on a person (that may not even be real), have small talks for a few days, and maybe, in a very small percentage of the cases, the match actually translates into a date. And in most of these small number of cases, you realize your match isn't worth the time and effort. And the process starts all over again.
 

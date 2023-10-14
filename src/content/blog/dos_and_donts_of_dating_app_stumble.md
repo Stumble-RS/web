@@ -11,7 +11,7 @@ tags:
   - Relationship Etiquette
 ---
 
-# Dating App Etiquette: The Dos and Don'ts
+## Dating App Etiquette: The Dos and Don'ts
 
 Dating apps have revolutionized the way we meet potential partners, providing a convenient platform to connect with others. But with this convenience comes a set of etiquettes that should be followed to ensure respectful and enjoyable interactions. In this blog, we'll explore the dos and don'ts of dating app etiquette, with a special emphasis on promoting old-school conversations that lead to in-person meetings.
 

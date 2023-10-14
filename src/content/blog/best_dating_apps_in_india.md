@@ -10,7 +10,7 @@ tags:
   - Branding
 ---
 
-# The Ultimate Comparison of Dating Apps: Promoting Real Conversations
+## The Ultimate Comparison of Dating Apps: Promoting Real Conversations
 
 ## Introduction
 
