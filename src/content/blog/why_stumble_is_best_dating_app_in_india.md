@@ -1,5 +1,5 @@
 ---
-title: Why Stumble is Best
+title: Why Stumble is your best option?
 publishDate: 2020-10-13 12:40:10
 img: /assets/stock-1.jpg
 img_alt: Why Stumble is Best
