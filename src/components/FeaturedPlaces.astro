@@ -1,5 +1,6 @@
 ---
 import type { FeaturedPlace } from "../utils/types";
+import { shuffle } from "../utils/helpers";
 import { FEATURED_PLACES } from "../utils/constants";
 const { list = FEATURED_PLACES } = Astro.props;
 ---
@@ -7,7 +8,7 @@ const { list = FEATURED_PLACES } = Astro.props;
 <h3 class='text-3xl'>Features places:</h3>
 <ul>
   {
-    list.map((place: FeaturedPlace) => (
+    shuffle(list as FeaturedPlace[]).map((place: FeaturedPlace) => (
       <li>
         <a href={`/cities/${place.route}`} target='_blank'>
           {place.name}

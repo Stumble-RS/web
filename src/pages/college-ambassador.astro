@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import "./../styles/about.css";
+
+const Datalist = [
+  {
+    title: "Why Join Us:",
+    points: [
+      "Hands-on Learning: Get practical experience, tackle real challenges, and witness a startup's growth.",
+      "Networking: Connect with our team, mentors, and industry professionals.",
+      "Personal Growth: Develop problem-solving skills and adaptability, vital for your future career.",
+      "Impact: Your contributions matter, and you'll help shape our brand's future.",
+      "Exclusive Insights: Gain valuable startup knowledge.",
+    ],
+  },
+  {
+    title: "What We Expect:",
+    points: [
+      "Enthusiasm, creativity, and excellent communication.",
+      "A commitment to representing our brand.",
+    ],
+  },
+  {
+    title: "What You Get:",
+    points: [
+      "A supportive team.",
+      "Flexible hours.",
+      "Recognition for your efforts.",
+    ],
+  },
+];
+---
+
+<BaseLayout additionalTitle='College Ambassdor'>
+  <div class='stack gap-20'>
+    <main class='wrapper about'>
+      <Hero
+        title='Stumble : College Ambassadors'
+        tagline='Join Our Startup Journey as a College Ambassador - A Unique Learning Opportunity Awaits You!'
+      />
+      <p class='text-4xl'>
+        Imagine being part of a journey of an application like Bumble but at a
+        very young stage.
+      </p>
+      <div class='bg-accent-regular text-white py-8'>
+        <div class='container mx-auto text-center'>
+          <h1 class='text-4xl font-bold mb-4'>
+            Join Our Startup as a College Ambassador - Limited Spots Available!
+          </h1>
+          <p class='text-lg text-gray-400 mb-6'>
+            Are you a college student ready to gain real-world experience and
+            stand out from the crowd? Join our early-stage startup as a College
+            Ambassador and:
+          </p>
+
+          {
+            Datalist.map((data) => {
+              return (
+                <div class='text-left bg-accent-dark py-4 rounded-lg shadow-lg mb-6'>
+                  <h2 class='text-xl font-semibold mb-2'>{data.title}</h2>
+                  <ul class='list-disc list-inside'>
+                    {data.points.map((point) => {
+                      return <li class='mb-2'>{point}</li>;
+                    })}
+                  </ul>
+                </div>
+              );
+            })
+          }
+
+          <p class='text-gray-400 mb-4'>
+            Don't miss out on this unique opportunity! Join our startup as a
+            College Ambassador today, and let's shape the future together!
+          </p>
+
+          <a
+            href='#'
+            class='bg-accent-light text-white py-2 px-4 rounded-full inline-block'
+            >Apply Now</a
+          >
+        </div>
+      </div>
+
+      <iframe
+        src='https://docs.google.com/forms/d/e/1FAIpQLSfOf-wi6-KKTeOFqtx393Skjn5vzeqeeG6VJ6RXsbFZAcztdQ/viewform?embedded=true'
+        class='w-full h-96'
+        allowfullscreen>Loading…</iframe
+      >
+    </main>
+  </div>
+</BaseLayout>
