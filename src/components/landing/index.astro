@@ -33,15 +33,15 @@ const content = {
 <BaseLayout>
   <div class='stack gap-20 lg:gap-48'>
     <div class='wrapper stack gap-8 lg:gap-20'>
-      <header class='hero'>
+      <header class='hero' id='landing'>
         <Hero title={content.title} tagline={content.desc} align='start'>
           <div class='roles'>
-            <!-- <Pill><Icon icon='code' size='1.33em' /> AppleStore Link</Pill>
+            <!-- <Pill><Icon icon='code' size='0.33em' /> AppleStore Link</Pill>
             <Pill>
-              <Icon icon='microphone-stage' size='1.33em' /> Playstore Link
+              <Icon icon='microphone-stage' size='0.33em' /> Playstore Link
             </Pill> -->
-            <JoinWaitlistBtn onClick='' />
           </div>
+          <JoinWaitlistBtn onClick='' />
         </Hero>
 
         <video autoplay width='700'>
@@ -76,7 +76,7 @@ const content = {
   }
 
   @media (min-width: 50em) {
-    .hero {
+    #landing.hero {
       display: grid;
       grid-template-columns: 6fr 4fr;
       padding-inline: 2.5rem;

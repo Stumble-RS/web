@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Hero from "../../components/Hero.astro";
+import "./../../styles/about.css";
+import { FEATURED_PLACES } from "../../utils/constants";
+import FeaturedPlaces from "../../components/FeaturedPlaces.astro";
+---
+
+<BaseLayout additionalTitle='Cities' additionalDescription='We are everywhere'>
+  <div class='stack gap-20'>
+    <main class='wrapper about'>
+      <Hero
+        title='Where all we are active?'
+        tagline='We are active in many cities as of now. We are expanding our reach to more cities.'
+      />
+      <FeaturedPlaces />
+    </main>
+  </div>
+</BaseLayout>

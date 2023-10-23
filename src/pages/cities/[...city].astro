@@ -1,0 +1,40 @@
+---
+export const prerender = true;
+
+import FeaturedPlaces from "../../components/FeaturedPlaces.astro";
+import Hero from "../../components/Hero.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  FEATURED_PLACES,
+  FEATURED_PLACE_ROUTE_TO_OBJ,
+} from "../../utils/constants";
+
+export function getStaticPaths() {
+  return [
+    ...FEATURED_PLACES.map((place) => ({
+      params: { city: place.route },
+    })),
+  ];
+}
+
+const { city } = Astro.params;
+
+const { name, tagline } = FEATURED_PLACE_ROUTE_TO_OBJ[city || ""] || {
+  name: "",
+  tagline: "",
+};
+---
+
+<BaseLayout additionalTitle={name} additionalDescription='We are everywhere'>
+  <div class='stack gap-20'>
+    <main class='wrapper about'>
+      <Hero title={name} tagline={tagline} />
+      <h5 class='py-20'>
+        More details about {name} coming soon!
+      </h5>
+      <FeaturedPlaces
+        list={FEATURED_PLACES.filter((place) => place.route !== city)}
+      />
+    </main>
+  </div>
+</BaseLayout>

@@ -1,0 +1,1 @@
+export type FeaturedPlace ={ name: string; route: string; tagline: string }

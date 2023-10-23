@@ -36,15 +36,6 @@ section {
 }
 
 @media (min-width: 50em) {
-  /* .about {
-    display: grid;
-    grid-template-columns: 1fr 60% 1fr;
-  }
-
-  .about > :global(:first-child) {
-    grid-column-start: 2;
-  } */
-
   section {
     display: contents;
     font-size: var(--text-lg);
