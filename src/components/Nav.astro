@@ -1,7 +1,7 @@
 ---
 import { Picture } from "astro:assets";
-import IconLinks  from "../utils/socialLinks";
-import Icon, { Props as IconProps } from "./Icon.astro";
+import IconLinks from "../utils/socialLinks";
+import Icon, { type Props as IconProps } from "./Icon.astro";
 import logo from "../../public/assets/logo.svg";
 
 /** Main menu items */
@@ -10,17 +10,21 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Blogs", href: "/blogs/" },
   { label: "Testimonials", href: "/testimonials/" },
   { label: "About", href: "/about/" },
-  {label: "Competitors", href: "/competitors/"},
-  {label: "Workings", href: "/workings/"},
+  { label: "Competitors", href: "/competitors/" },
+  { label: "Workings", href: "/workings/" },
   { label: "Privacy", href: "/privacy/" },
 ];
 
-const SOCIAL_LINKS_LIST: { label: string; href: string; icon: IconProps["icon"] }[] = [
+const SOCIAL_LINKS_LIST: {
+  label: string;
+  href: string;
+  icon: IconProps["icon"];
+}[] = [
   { label: "Twitter", href: IconLinks.twitter, icon: "twitter-logo" },
   { label: "Instagram", href: IconLinks.instagram, icon: "instagram-logo" },
   { label: "GitHub", href: IconLinks.github, icon: "github-logo" },
   { label: "Linkedin", href: IconLinks.linkedin, icon: "linkedin-logo" },
-  { label: "Youtube", href: IconLinks.youtube, icon: "youtube-logo"},
+  { label: "Youtube", href: IconLinks.youtube, icon: "youtube-logo" },
 ];
 ---
 
@@ -31,9 +35,9 @@ const SOCIAL_LINKS_LIST: { label: string; href: string; icon: IconProps["icon"] 
         width={43}
         height={173}
         src={logo}
-        alt="Stumble, dating made better"
+        alt='Stumble, meeting new people made better'
       />
-      Stumble
+       Stumble
     </a>
     <menu-button>
       <template>
@@ -284,7 +288,8 @@ const SOCIAL_LINKS_LIST: { label: string; href: string; icon: IconProps["icon"] 
     .link {
       padding: 0.5rem 1rem;
       border-radius: 999rem;
-      transition: color var(--theme-transition),
+      transition:
+        color var(--theme-transition),
         background-color var(--theme-transition);
     }
 

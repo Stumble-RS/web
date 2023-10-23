@@ -1,33 +1,33 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import TestimonialsData from '../components/TestimonialsData.astro';
-import Hero from '../components/Hero.astro';
-import "./../styles/about.css"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TestimonialsData from "../components/TestimonialsData.astro";
+import Hero from "../components/Hero.astro";
+import "./../styles/about.css";
 ---
 
 <BaseLayout>
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="Early Impressions: What Our Beta Testers Are Saying"
-				tagline="Get a glimpse of the initial reactions and feedback from our beta testers who have experienced our dating app's unique features and innovations. Explore their early impressions and insights as we fine-tune the app for an even better dating experience."/
-			>
-		</main>
-		<div class="mx-10">
-			<TestimonialsData />
-		</div>
-	</div>
+  <div class='stack gap-20'>
+    <main class='wrapper about'>
+      <Hero
+        title='Early Impressions: What Our Beta Testers Are Saying'
+        tagline="Get a glimpse of the initial reactions and feedback from our beta testers who have experienced our app's unique features and innovations. Explore their early impressions and insights as we fine-tune the app for an even better experience."
+      />
+      <div class='mx-10'>
+        <TestimonialsData />
+      </div>
+    </main>
+  </div>
+
+  <style>
+    @media (min-width: 50em) {
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 60% 1fr;
+      }
+
+      .about > :global(:first-child) {
+        grid-column-start: 2;
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style>
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-	}
-</style>

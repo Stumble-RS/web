@@ -9,17 +9,18 @@ interface Props {
 
 const {
   title = "Stumble! Date better.",
-  description = "Best dating app to meet new people in India. Making converations old-school.",
+  description = "Best app to meet new people in India. We intend to make converations old-school. Reviving meet-cutes.",
 } = Astro.props;
 
 const BRAND = {
   NAME: "Stumble",
   TAGLINE: "Date better.",
-  ABOUT: "Best dating app to meet new people in India. Making converations old-school.",
+  ABOUT:
+    "Best app to meet new people in India. We intend to make converations old-school. Reviving meet-cutes.",
   LOGO_URL: "https://getstumble.app/assets/logo.svg",
   TWITTER: "stumble_app+",
   WEBSITE: "https://getstumble.app",
-}
+};
 ---
 
 <meta charset='UTF-8' />
@@ -29,18 +30,20 @@ const BRAND = {
 <title>{title}</title>
 
 <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' />
-<meta property="og:type" content={"website"} />
-<meta property="og:site_name" content={BRAND.NAME} />
-<meta property="og:url" content={BRAND.WEBSITE} />
-<meta property="og:title" content={(BRAND.NAME + ' - ' + BRAND.TAGLINE)} />
-<meta property="og:description" content={BRAND.ABOUT} />
-<meta property="og:image" content={BRAND.LOGO_URL} />
-<meta name="twitter:site" content={'@'+BRAND.TWITTER} />
-<meta name="twitter:title" content={(BRAND.NAME + ' - ' + BRAND.TAGLINE)} />
-<meta name="twitter:description" content={BRAND.ABOUT} />
-<meta name="twitter:image" content={BRAND.LOGO_URL} />
-<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"/>
-<link rel="sitemap" href="/sitemap-index.xml" />
+<meta property='og:type' content={"website"} />
+<meta property='og:site_name' content={BRAND.NAME} />
+<meta property='og:url' content={BRAND.WEBSITE} />
+<meta property='og:title' content={BRAND.NAME + " - " + BRAND.TAGLINE} />
+<meta property='og:description' content={BRAND.ABOUT} />
+<meta property='og:image' content={BRAND.LOGO_URL} />
+<meta name='twitter:site' content={"@" + BRAND.TWITTER} />
+<meta name='twitter:title' content={BRAND.NAME + " - " + BRAND.TAGLINE} />
+<meta name='twitter:description' content={BRAND.ABOUT} />
+<meta name='twitter:image' content={BRAND.LOGO_URL} />
+<GoogleFontsOptimizer
+  url='https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap'
+/>
+<link rel='sitemap' href='/sitemap-index.xml' />
 <script is:inline>
   // This code is inlined in the head to make dark mode instant & blocking.
   const getThemePreference = () => {

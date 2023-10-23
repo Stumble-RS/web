@@ -1,20 +1,15 @@
 ---
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 
 import Hero from "../components/Hero.astro";
 
 // Page section components
 import AboutStumble from "../components/AboutStumble.astro";
-import IdeaSection from '../components/IdeaSection.astro';
+import IdeaSection from "../components/IdeaSection.astro";
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn.astro";
 import NeedStumble from "../components/NeedStumble.astro";
 import TestimonialsData from "../components/TestimonialsData.astro";
 import BlogList from "../components/BlogList.astro";
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <BaseLayout>
@@ -22,7 +17,7 @@ import BlogList from "../components/BlogList.astro";
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero'>
         <Hero
-          title='Stumble: The best dating app in India'
+          title='Stumble: The best app meet new people'
           tagline='Making conversations old-school :)'
           align='start'
         >
@@ -31,21 +26,21 @@ import BlogList from "../components/BlogList.astro";
             <Pill>
               <Icon icon='microphone-stage' size='1.33em' /> Playstore Link
             </Pill> -->
-            <JoinWaitlistBtn onClick=""/>
+            <JoinWaitlistBtn onClick='' />
           </div>
         </Hero>
 
-        <video autoplay width="700">
-          <source src='/assets/firstScreenVideo.mp4' type="video/mp4"/>
+        <video autoplay width='700'>
+          <source src='/assets/firstScreenVideo.mp4' type='video/mp4' />
         </video>
       </header>
     </div>
     <div class='wrapper stack gap-8 lg:gap-20'>
       <AboutStumble />
-      <NeedStumble showMiniHeading/>
-      <TestimonialsData/>
-      <IdeaSection showMiniHeading/>
-      <BlogList/>
+      <NeedStumble showMiniHeading />
+      <TestimonialsData />
+      <IdeaSection showMiniHeading />
+      <BlogList />
     </div>
   </div>
 </BaseLayout>
@@ -57,7 +52,6 @@ import BlogList from "../components/BlogList.astro";
     align-items: center;
     gap: 2rem;
   }
-
 
   .hero img {
     aspect-ratio: 5 / 4;
