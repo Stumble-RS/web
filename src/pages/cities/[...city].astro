@@ -28,7 +28,10 @@ const { name, tagline } = FEATURED_PLACE_ROUTE_TO_OBJ[city || ""] || {
 <BaseLayout additionalTitle={name} additionalDescription='We are everywhere'>
   <div class='stack gap-20'>
     <main class='wrapper about'>
-      <Hero title={name} tagline={tagline} />
+      <Hero
+        title={`Best app to meet new people in ${name}`}
+        tagline={tagline}
+      />
       <h5 class='py-20'>
         More details about {name} coming soon!
       </h5>
