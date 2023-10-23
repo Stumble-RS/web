@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { PAGE_MODE } from "../../utils/constants.ts";
+
+import Hero from "../Hero.astro";
+
+// Page section components
+import AboutStumble from "../AboutStumble.astro";
+import IdeaSection from "../IdeaSection.astro";
+import JoinWaitlistBtn from "../JoinWaitlistBtn.astro";
+import NeedStumble from "../NeedStumble.astro";
+import TestimonialsData from "../TestimonialsData.astro";
+import BlogList from "../BlogList.astro";
+
+interface Props {
+  mode: string;
+}
+
+const { mode = PAGE_MODE.GENERIC } = Astro.props;
+
+const content = {
+  [PAGE_MODE.GENERIC]: {
+    title: "Stumble: The best app meet new people",
+    desc: "Making conversations old-school :)",
+  },
+  [PAGE_MODE.DATING]: {
+    title: "Stumble: The best dating app in India",
+    desc: "Making conversations old-school :)",
+  },
+}[mode];
+---
+
+<BaseLayout>
+  <div class='stack gap-20 lg:gap-48'>
+    <div class='wrapper stack gap-8 lg:gap-20'>
+      <header class='hero'>
+        <Hero title={content.title} tagline={content.desc} align='start'>
+          <div class='roles'>
+            <!-- <Pill><Icon icon='code' size='1.33em' /> AppleStore Link</Pill>
+            <Pill>
+              <Icon icon='microphone-stage' size='1.33em' /> Playstore Link
+            </Pill> -->
+            <JoinWaitlistBtn onClick='' />
+          </div>
+        </Hero>
+
+        <video autoplay width='700'>
+          <source src='/assets/firstScreenVideo.mp4' type='video/mp4' />
+        </video>
+      </header>
+    </div>
+    <div class='wrapper stack gap-8 lg:gap-20'>
+      <AboutStumble />
+      <NeedStumble showMiniHeading />
+      <TestimonialsData />
+      <IdeaSection showMiniHeading />
+      <BlogList />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero img {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      display: grid;
+      grid-template-columns: 6fr 4fr;
+      padding-inline: 2.5rem;
+      gap: 3.75rem;
+    }
+
+    .roles {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .hero img {
+      aspect-ratio: 3 / 4;
+      border-radius: 4.5rem;
+      object-fit: cover;
+    }
+  }
+</style>
