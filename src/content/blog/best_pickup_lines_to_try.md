@@ -4,7 +4,7 @@ publishDate: 2019-10-02 00:00:00
 img: /assets/stock-4.jpg
 img_alt: Ultimate guide to picking up people online
 description: |
-  The Ultimate Guide to pickup lines. All you will ever need to pick up people online.
+  The Ultimate Guide to pickup lines. All you will ever need to pick up people online. Tried & tested pickup lines that will help you start a conversation.
 tags:
   - Notes
   - Tips

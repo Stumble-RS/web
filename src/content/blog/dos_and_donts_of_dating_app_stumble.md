@@ -3,8 +3,7 @@ title: Dating App Etiquette - The Dos and Don'ts
 publishDate: 2023-10-15 00:00:00
 img: /assets/stock-1.jpg
 img_alt: Dating App Etiquette - The Dos and Don'ts
-description: |
-  Learn the essential dos and don'ts of dating app etiquette to ensure respectful and enjoyable interactions. Discover the best practices for building meaningful connections and promoting old-school conversations that lead to in-person meetings.
+description: Learn the essential dos & don'ts of dating app to ensure enjoyable interactions. Discover the best practices for building meaningful connections.
 tags:
   - Dating Apps
   - Online Dating

@@ -23,7 +23,7 @@ const { mode = PAGE_MODE.GENERIC } = Astro.props;
 const content = {
   [PAGE_MODE.GENERIC]: {
     title: "Stumble: The best app to meet new people",
-    desc: "Reviving cold-school onversations :)",
+    desc: "Reviving old-school conversations :)",
   },
   [PAGE_MODE.DATING]: {
     title: "Stumble: The best dating app in India",
@@ -34,7 +34,10 @@ const content = {
 const showFullPage = mode === PAGE_MODE.GENERIC;
 ---
 
-<BaseLayout title={content.title} description={content.desc}>
+<BaseLayout
+  additionalTitle={content.title}
+  additionalDescription={content.desc}
+>
   <div class='stack gap-20 lg:gap-48'>
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero' id='landing'>

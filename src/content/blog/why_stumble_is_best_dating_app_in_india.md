@@ -4,7 +4,7 @@ publishDate: 2020-10-13 12:40:10
 img: /assets/stock-1.jpg
 img_alt: Why Stumble is Best
 description: |
-  It may sound self promoting, but why is stumble the best app currently in India? Let's take a deep dive into the features that make Stumble the best dating app in India.
+  It may sound self promoting, but let's take a deep dive into the features that make Stumble the best dating app in India.
 tags:
   - About
   - Product
