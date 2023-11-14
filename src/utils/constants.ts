@@ -8,7 +8,8 @@ export const PAGE_MODE = {
 export const FEATURED_PLACES : FeaturedPlace[] = [
   { name: "Bangalore", route: "bangalore", tagline: "The Garden City, Where Innovation Blossoms." },
   {name: "Delhi", route: "delhi", tagline: "A Historical Tapestry of Modern Lifestyles."},
-  {name: "Mumbai", route: "mumbai", tagline: "The City of Dreams, Where Every Dreamer Thrives"},
+  { name: "Mumbai", route: "mumbai", tagline: "The City of Dreams, Where Every Dreamer Thrives" },
+  {name: "Lucknow", route: "lucknow", tagline: "Muskuraiye Janaab, aap Lucknow mein hain"},
 ];
 
 export const FEATURED_PLACE_ROUTE_TO_OBJ = FEATURED_PLACES.reduce((acc : {[city: string]: FeaturedPlace}, curr: FeaturedPlace) => {

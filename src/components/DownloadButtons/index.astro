@@ -1,0 +1,59 @@
+---
+import PlayIcon from "./playIcon.astro";
+import IosIcon from "./iosIcon.astro";
+
+const buttonProps = {
+  class: "btn w-48 cursor-pointer btn--radius",
+  target: "_blank",
+};
+
+const Links = {
+  ios: "https://testflight.apple.com/join/A6THUzLN",
+  android: "https://appdistribution.firebase.dev/i/a870907ee8e2af43",
+};
+
+const textStyles = {
+  buttonLarge: "btn__content btn__content--big text-lg",
+  buttonSmall: "btn__content text-xs font-bold",
+};
+---
+
+<div class='flex space-x-4'>
+  <a {...buttonProps} href={Links.ios}>
+    <IosIcon />
+    <div class={textStyles.buttonLarge}>Get Beta</div>
+    <div class={textStyles.buttonSmall}>for Ios</div>
+  </a>
+
+  <a {...buttonProps} href={Links.android}>
+    <PlayIcon />
+    <div class={textStyles.buttonLarge}>Get Beta</div>
+    <div class={textStyles.buttonSmall}>for Android</div>
+  </a>
+</div>
+
+<style>
+  .btn {
+    height: 60px;
+    border: none;
+    background-color: var(--gray-100);
+    color: black;
+  }
+
+  .btn__content {
+    width: 110px;
+    height: 28px;
+    float: right;
+    margin-right: 15px;
+    text-align: left;
+  }
+
+  .btn__content--big {
+    height: 22px;
+    margin-top: 8px;
+  }
+
+  .btn--radius {
+    border-radius: 30px;
+  }
+</style>

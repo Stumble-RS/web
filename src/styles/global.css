@@ -287,3 +287,11 @@ h5 {
     scroll-behavior: auto;
   }
 }
+
+.btn__logo {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 10px 0 14px 20px;
+  position: relative;
+}

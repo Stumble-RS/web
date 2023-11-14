@@ -12,6 +12,7 @@ import NeedStumble from "../NeedStumble.astro";
 import TestimonialsData from "../TestimonialsData.astro";
 import BlogList from "../BlogList.astro";
 import FeaturedPlaces from "../FeaturedPlaces.astro";
+import DownloadButtons from "../DownloadButtons/index.astro";
 
 interface Props {
   mode: string;
@@ -22,13 +23,15 @@ const { mode = PAGE_MODE.GENERIC } = Astro.props;
 const content = {
   [PAGE_MODE.GENERIC]: {
     title: "Stumble: The best app to meet new people",
-    desc: "Making conversations old-school :)",
+    desc: "Reviving cold-school onversations :)",
   },
   [PAGE_MODE.DATING]: {
     title: "Stumble: The best dating app in India",
-    desc: "Making conversations old-school :)",
+    desc: "Bringing back the meet cutes :)",
   },
 }[mode];
+
+const showFullPage = mode === PAGE_MODE.GENERIC;
 ---
 
 <BaseLayout title={content.title} description={content.desc}>
@@ -36,12 +39,7 @@ const content = {
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero' id='landing'>
         <Hero title={content.title} tagline={content.desc} align='start'>
-          <div class='roles'>
-            <!-- <Pill><Icon icon='code' size='0.33em' /> AppleStore Link</Pill>
-            <Pill>
-              <Icon icon='microphone-stage' size='0.33em' /> Playstore Link
-            </Pill> -->
-          </div>
+          <DownloadButtons />
           <JoinWaitlistBtn onClick='' />
         </Hero>
 
@@ -52,11 +50,11 @@ const content = {
     </div>
     <div class='wrapper stack gap-8 lg:gap-20'>
       <AboutStumble />
-      <NeedStumble showMiniHeading />
-      <TestimonialsData />
+      {showFullPage && <NeedStumble showMiniHeading />}
+      {showFullPage && <TestimonialsData />}
       <IdeaSection showMiniHeading />
       <FeaturedPlaces />
-      <BlogList />
+      {showFullPage && <BlogList />}
     </div>
   </div>
 </BaseLayout>

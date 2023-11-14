@@ -1,87 +1,102 @@
 ---
-import Icon from './Icon.astro';
+import Icon from "./Icon.astro";
 
 const TestimonialsList = [
-	{
-		name: 'Shreya',
-		message: 'Thank you for this much needed app! I have finally found a medium to interact with my college crush!',
-	},
-	{
-		name: 'Zoya',
-		message: 'The app that our generation desperately needed! This app made having conversations with strangers extremely convenient, and will help me connect with a bunch of interesting people!',
-	},
-	{
-		name: 'Anushka',
-		message: 'Finally a way to experience my meet-cute fantasy! Thank you team Stumble for making this happen!!',
-	},
-	{
-		name: 'Sarah',
-		message: "I was thrilled to be part of the beta test for this app. The user-friendly interface and innovative features have truly set it apart. While I haven't found 'the one' just yet, I can already see that this app has the potential to revolutionize the dating scene in India."
-	},
-	{
-		name: "Raj",
-		message: "As a beta tester, I've been impressed by the thoughtful design and attention to user privacy. The app's unique approach to matching and its focus on meaningful connections are quite promising. I can't wait to see where this app goes."
-	},
-	{
-		name: "Sneha",
-		message: "I've had my fair share of experiences with dating apps, but this beta app stands out. It's refreshing to see an app that encourages genuine conversations and respects cultural nuances. While it's early days, I'm optimistic about the potential for lasting connections through this platform."
-	}
+  {
+    name: "Shreya",
+    message:
+      "Thank you for this much needed app! I have finally found a medium to interact with my college crush!",
+  },
+  {
+    name: "Zoya",
+    message:
+      "The app that our generation desperately needed! This app made having conversations with strangers extremely convenient, and will help me connect with a bunch of interesting people!",
+  },
+  {
+    name: "Anushka",
+    message:
+      "Finally a way to experience my meet-cute fantasy! Thank you team Stumble for making this happen!!",
+  },
+  {
+    name: "Sarah",
+    message:
+      "I was thrilled to be part of the beta test for this app. The user-friendly interface and innovative features have truly set it apart. While I haven't found 'the one' just yet, I can already see that this app has the potential to revolutionize the dating scene in India.",
+  },
+  {
+    name: "Raj",
+    message:
+      "As a beta tester, I've been impressed by the thoughtful design and attention to user privacy. The app's unique approach to matching and its focus on meaningful connections are quite promising. I can't wait to see where this app goes.",
+  },
+  {
+    name: "Sneha",
+    message:
+      "I've had my fair share of experiences with dating apps, but this beta app stands out. It's refreshing to see an app that encourages genuine conversations and respects cultural nuances. While it's early days, I'm optimistic about the potential for lasting connections through this platform.",
+  },
 ];
 ---
 
-<div class="box">
-	<h2 class="font-bold text-4xl pb-10">
-		What are early adopters have to say about us: 
-	</h2>
-	<section class="skills">
-	{TestimonialsList.map(data => {
-		return <div class="stack gap-2 lg:gap-4">
-		<Icon icon="heart" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h3>{data.name}</h3>
-		<p>{data.message}</p>
-	</div>
-	}) }
-	</section>
+<div class='box'>
+  <h2 class='font-bold text-4xl pb-10'>
+    What our early adopters have to say about us:
+  </h2>
+  <section class='skills'>
+    {
+      TestimonialsList.map((data) => {
+        return (
+          <div class='stack gap-2 lg:gap-4'>
+            <Icon
+              icon='heart'
+              color='var(--accent-regular)'
+              size='2.5rem'
+              gradient
+            />
+            <h3>{data.name}</h3>
+            <p>{data.message}</p>
+          </div>
+        );
+      })
+    }
+  </section>
 </div>
 
 <style>
-	h2 {
-		font-size: var(--text-3xl);
-	}
-	.box {
-		/* border: 1px solid var(--gray-800); */
-		border-radius: 0.75rem;
-		background-color: var(--gray-999_40);
-		/* box-shadow: var(--shadow-sm); */
-	}
+  h2 {
+    font-size: var(--text-3xl);
+  }
+  .box {
+    /* border: 1px solid var(--gray-800); */
+    border-radius: 0.75rem;
+    background-color: var(--gray-999_40);
+    /* box-shadow: var(--shadow-sm); */
+  }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 
-	.skills h3 {
-		font-size: var(--text-lg);
-	}
+  .skills h3 {
+    font-size: var(--text-lg);
+  }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+  .skills p {
+    color: var(--gray-400);
+  }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-		}
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+    }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
 
-		.skills h3 {
-			font-size: var(--text-2xl);
-		}
-	}
+    .skills h3 {
+      font-size: var(--text-2xl);
+    }
+  }
 </style>
