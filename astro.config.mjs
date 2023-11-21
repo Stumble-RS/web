@@ -1,17 +1,16 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import compress from "astro-compress";
-import vercel from '@astrojs/vercel/serverless';
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  adapter: vercel({
-    analytics: true,
-  }),
+  adapter: cloudflare(),
   image: {
-    service: passthroughImageService(),
+    service: passthroughImageService()
   },
   compressHTML: true,
   site: "https://getstumble.app",
