@@ -7,7 +7,6 @@ import Hero from "../Hero.astro";
 // Page section components
 import AboutStumble from "../AboutStumble.astro";
 import IdeaSection from "../IdeaSection.astro";
-import JoinWaitlistBtn from "../JoinWaitlistBtn.astro";
 import NeedStumble from "../NeedStumble.astro";
 import TestimonialsData from "../TestimonialsData.astro";
 import BlogList from "../BlogList.astro";
@@ -43,7 +42,6 @@ const showFullPage = mode === PAGE_MODE.GENERIC;
       <header class='hero' id='landing'>
         <Hero title={content.title} tagline={content.desc} align='start'>
           <DownloadButtons />
-          <!-- <JoinWaitlistBtn /> -->
         </Hero>
 
         <video autoplay width='700'>
